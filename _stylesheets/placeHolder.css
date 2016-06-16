@@ -1,0 +1,163 @@
+/* Clean canvas */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+
+/* Defaults */
+
+body {
+    font-family: "Lucida Console", Monaco, monospace;
+    background-color: #424242;
+    color: #FFFFFF;
+}
+
+
+/* Main page container */
+
+main {
+    overflow: auto;
+}
+
+.page_container {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: 100%;
+    text-align: center;
+    padding-bottom: 100px;
+}
+
+
+/* Fancy links */
+
+a {
+    text-decoration: none;
+    color: #FF9800;
+}
+
+a:hover {
+    color: #FFFFFF;
+}
+
+
+/* Page title */
+
+h1 {
+    color: #F44235;
+    font-size: 3em;
+    font-family: "Courier New", Courier, monospace;
+}
+
+p {
+    color: #9E9E9E;
+    line-height: 1.8em;
+}
+
+
+/* Social Nav */
+
+nav {
+    text-align: left;
+    display: inline-block;
+}
+
+
+/* Fancy shenanigans*/
+.commentHeader::before {
+    content: "// ";
+}
+
+.commentHeader {
+    color: #FFFFFF;
+    margin-bottom: 0;
+}
+
+.functionName::before {
+    content: "public static Profiles ";
+    color: #5F7C8A;
+    font-style: italic;
+}
+
+.functionName {
+    color: #CCDB38;
+}
+
+.functionName::after {
+    content: "() {";
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+.functionData {
+    margin: 3px 0 3px 0;
+    padding: 10px 5px 5px 2px;
+    list-style: none;
+    border-left: 1.4px dotted #B6B6B6;
+}
+
+.functionData > li {
+    padding: 10px 0 10px 0;
+}
+
+.func_body::after {
+    content: "}";
+    font-weight: bold;
+}
+
+.functionData > li::before {
+    content: "----/ ";
+    color: #B6B6B6;
+}
+
+/* PGP key */
+.objectName::before {
+    content: "public final Key ";
+    color: #5F7C8A;
+    font-style: italic;
+    font-weight: normal;
+}
+
+.objectName {
+    color: #E81D62;
+    font-weight: bold;
+}
+
+.assignment_opr {
+    color: #FFFFFF;
+}
+
+.raw_assign::after {
+    content: " [";
+    font-weight: bold;
+}
+
+.raw_data::after {
+    content: "]";
+}
+
+.assignment_opr + .functionName::before {
+    content: "";
+}
+
+.assignment_opr + .functionName::after {
+    content: "()";
+}
+
+/* Page footer */
+footer {
+    margin-top: 100px;
+    position: absolute;
+    background-color: #212121;
+    height: 100px;
+    width: 100%;
+}
+
+footer > .copyright {
+    padding: 40px 40px 20px 40px;
+}
