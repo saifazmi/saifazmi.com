@@ -45,6 +45,9 @@ a:hover {
     color: #FFFFFF;
 }
 
+a > .functionName:hover {
+    color: #FFFFFF;
+}
 
 /* Page title */
 
@@ -141,12 +144,16 @@ nav {
     content: "]";
 }
 
-.assignment_opr + .functionName::before {
+.assignment_opr + a > .functionName::before {
     content: "";
 }
 
-.assignment_opr + .functionName::after {
+.assignment_opr + a > .functionName::after {
     content: "()";
+}
+
+.assignment_opr + a:hover > .functionName::after {
+    color: #FF9800;
 }
 
 /* Page footer */
