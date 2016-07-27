@@ -161,3 +161,11 @@ footer {
 footer > .copyright {
     padding: 40px 40px 20px 40px;
 }
+
+.copyright > a {
+    color: #9E9E9E;
+}
+
+.copyright > a:hover {
+    color: #FFFFFF;
+}
