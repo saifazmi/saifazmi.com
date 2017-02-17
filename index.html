@@ -7,12 +7,15 @@
     <title>SaifAzmi_</title>
     <link rel="shortcut icon" href="assets/img/favicon.png" />
     <link rel="stylesheet" href="stylesheets/placeHolder.css" type="text/css" />
+    <script src="https://use.fontawesome.com/8e29b26b66.js"></script>
 </head>
 
 <body>
     <main class="page_container">
         <a href="http://saifazmi.com" title="Home"><h1>Saif Azmi</h1></a>
-        <a href="mailto:hi@saifazmi.com" title="Email me">hi@saifazmi.com</a>
+        <a href="mailto:hi@saifazmi.com" title="Email me" class="icon_link_combo">
+            <i class="fa fa-envelope" aria-hidden="true"></i> hi@saifazmi.com
+        </a>
         <p id="aboutme">
             Hi! and welcome to my home on the internet :)
             <br />I'm a Computer Science student at the <a href="http://www.birmingham.ac.uk/index.aspx" target="_blank" title="UoB Home">University of Birmingham</a> and
@@ -25,14 +28,27 @@
             </p>
             <main class="func_body">
                 <ul class="functionData">
-                    <li class="socialnav_links"><a id="github_link" href="https://github.com/saifazmi" target="_blank" title="GitHub Profile">GitHub</a></li>
-                    <li class="socialnav_links"><a id="twitter_link" href="https://twitter.com/saifuazmi" target="_blank" title="Twitter Account">Twitter</a></li>
-                    <li class="socialnav_links"><a id="keybase_link" href="https://keybase.io/saifazmi" target="_blank" title="Keybase Profile">Keybase.io</a></li>
+                    <li class="socialnav_links">
+                        <a id="github_link" href="https://github.com/saifazmi" target="_blank" title="GitHub Profile" class="icon_link_combo">
+                            <i class="fa fa-github-alt" aria-hidden="true"></i> GitHub
+                        </a>
+                    </li>
+                    <li class="socialnav_links">
+                        <a id="twitter_link" href="https://twitter.com/saifuazmi" target="_blank" title="Twitter Account" class="icon_link_combo">
+                            <i class="fa fa-twitter" aria-hidden="true"></i> Twitter
+                        </a>
+                    </li>
+                    <li class="socialnav_links">
+                        <a id="keybase_link" href="https://keybase.io/saifazmi" target="_blank" title="Keybase Profile" class="icon_link_combo">
+                            <i class="fa fa-lock" aria-hidden="true"></i> Keybase.io
+                        </a>
+                    </li>
                 </ul>
             </main>
             <p class="commentHeader">
                 Or send me a secret message!
-                <br /><span class="objectName">MY_PGP_KEY</span> <span class="assignment_opr">=</span> <a href="assets/keys/2A8C4685.asc" target="_blank" title="Public PGP key"><span class="functionName">getPubKey</span></a>
+                <br /><span class="objectName">MY_PGP_KEY</span> <span class="assignment_opr">=</span>
+                <a href="assets/keys/2A8C4685.asc" target="_blank" title="Public PGP key"> <span class="functionName">getPubKey</span></a>
                 <br /><span class="objectName">FINGERPRINT</span> <span class="assignment_opr raw_assign">=</span>
             </p>
             <main class="func_body raw_data">

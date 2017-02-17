@@ -49,6 +49,18 @@ a > .functionName:hover {
     color: #FFFFFF;
 }
 
+
+/* Links with icons */
+
+.icon_link_combo i {
+    color: #FFFFFF;
+}
+
+.icon_link_combo:hover i {
+    color: #FF9800;
+}
+
+
 /* Page title */
 
 h1 {
@@ -72,6 +84,7 @@ nav {
 
 
 /* Fancy shenanigans*/
+
 .commentHeader::before {
     content: "// ";
 }
@@ -118,7 +131,9 @@ nav {
     color: #B6B6B6;
 }
 
+
 /* PGP key */
+
 .objectName::before {
     content: "public final Key ";
     color: #5F7C8A;
@@ -156,7 +171,9 @@ nav {
     color: #FF9800;
 }
 
+
 /* Page footer */
+
 footer {
     margin-top: 100px;
     position: absolute;
