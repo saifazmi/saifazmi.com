@@ -186,21 +186,33 @@ nav {
 /* Page footer */
 
 footer {
-    margin-top: 100px;
+    margin-top: 80px;
     position: absolute;
     background-color: #212121;
     height: 100px;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
 }
 
-footer > .copyright {
-    padding: 40px 40px 20px 40px;
+footer > .sub-txt {
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
-.copyright > a {
+.sub-txt > a {
     color: #9E9E9E;
 }
 
-.copyright > a:hover {
+.sub-txt > a:hover {
     color: #FFFFFF;
 }
