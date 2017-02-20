@@ -221,13 +221,13 @@ footer > .sub-txt {
 }
 
 .sub-txt .fa-heart:hover {
-    color: #E57373;
+    color: #F44336;
 }
 
 .sub-txt .fa-coffee:hover {
-    color: #64B5F6;
+    color: #FF9800;
 }
 
 .sub-txt .fa-moon-o:hover {
-    color: #BA68C8;
+    color: #AB47BC;
 }
