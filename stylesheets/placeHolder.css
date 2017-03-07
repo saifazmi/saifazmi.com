@@ -216,6 +216,7 @@ footer > .sub-txt {
 .sub-txt > a:hover,
 .sub-txt .fa-heart,
 .sub-txt .fa-coffee,
+.sub-txt .fa-headphones,
 .sub-txt .fa-moon-o {
     color: #FFFFFF;
 }
@@ -225,7 +226,11 @@ footer > .sub-txt {
 }
 
 .sub-txt .fa-coffee:hover {
-    color: #FF9800;
+    color: #FFEB3B;
+}
+
+.sub-txt .fa-headphones:hover {
+    color: #FF7043;
 }
 
 .sub-txt .fa-moon-o:hover {
