@@ -203,6 +203,7 @@ footer {
     align-items: center;
     width: 100%;
     height: 100px;
+    font-size: small;
 }
 
 footer > .sub-txt {
