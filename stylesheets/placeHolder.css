@@ -81,6 +81,10 @@ h1 {
     margin-bottom: 0px;
 }
 
+h1 + a {
+    color: inherit;
+}
+
 p {
     color: #9E9E9E;
     line-height: 1.8em;
