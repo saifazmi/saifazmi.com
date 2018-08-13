@@ -10,6 +10,33 @@
   <link rel="stylesheet" type="text/css" href="css/minireset.min.css">
   <link rel="stylesheet" type="text/css" href="css/main.css">
   <link rel="stylesheet" type="text/css" href="css/animations.css">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123828896-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-123828896-1');
+  </script>
+
+  <script>
+    /**
+    * Function that tracks a click on an outbound link in Analytics.
+    * This function takes a valid URL string as an argument, and uses that URL string
+    * as the event label. Setting the transport method to 'beacon' lets the hit be sent
+    * using 'navigator.sendBeacon' in browser that support it.
+    */
+    var trackOutboundLink = function(url) {
+      gtag('event', 'click', {
+        'event_category': 'outbound',
+        'event_label': url,
+        'transport_type': 'beacon',
+        'event_callback': function(){document.location = url;}
+      });
+    }
+    </script>
 </head>
 <body>
   <div class="content">
@@ -28,26 +55,26 @@
       <hr class="hr">
       <div class="description">
         <p>
-          I utilise software technologies to build robust solutions for real world problems.
+          Part-time hacker, full-time code wrangler and everything tech.
         </p>
       </div>
       <div class="contact">
-        <a class="button" href="mailto:hi@saifazmi.com?subject=Hello">Email Me</a>
+        <a class="button" onclick="trackOutboundLink('mailto:hi@saifazmi.com?subject=Hello'); return false;" href="mailto:hi@saifazmi.com?subject=Hello">Email Me</a>
       </div>
       <div class="contact">
-        <a class="button" href="https://t.me/saifazmi">Telegram</a>
+        <a class="button" onclick="trackOutboundLink('https://t.me/saifazmi'); return false;" href="https://t.me/saifazmi">Telegram</a>
       </div>
       <ul class="social">
-        <li><a href="https://twitter.com/saifazmi_">
+        <li><a onclick="trackOutboundLink('https://twitter.com/saifazmi_'); return false;" href="https://twitter.com/saifazmi_">
           <i class="fab fa-twitter"></i>
         </a></li>
-        <li><a href="https://github.com/saifazmi">
+        <li><a onclick="trackOutboundLink('https://github.com/saifazmi'); return false;" href="https://github.com/saifazmi">
           <i class="fab fa-github"></i>
         </a></li>
-        <li><a href="https://www.linkedin.com/in/saifazmi/">
+        <li><a onclick="trackOutboundLink('https://www.linkedin.com/in/saifazmi/'); return false;" href="https://www.linkedin.com/in/saifazmi/">
           <i class="fab fa-linkedin"></i>
         </a></li>
-        <li><a href="https://keybase.io/saifazmi">
+        <li><a onclick="trackOutboundLink('https://keybase.io/saifazmi'); return false;" href="https://keybase.io/saifazmi">
           <i class="fab fa-keybase"></i>
         </a></li>
       </ul>
