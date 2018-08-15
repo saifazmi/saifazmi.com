@@ -1,0 +1,11 @@
+:root {
+  --black: #101010;
+  --red: #F44235;
+  --orange: #FB8C00;
+  --green: #43A047;
+  --pink: #E81D62;
+
+
+  --main-bg-color: var(#FFF);
+  --main-font-color: var(--black);
+}

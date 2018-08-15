@@ -8,8 +8,23 @@
   <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="css/minireset.min.css">
+  <link rel="stylesheet" type="text/css" href="css/dark.css" id="theme" data-theme="dark">
   <link rel="stylesheet" type="text/css" href="css/main.css">
   <link rel="stylesheet" type="text/css" href="css/animations.css">
+
+  <script>
+    function switchTheme() {
+      var theme_link = document.getElementById('theme');
+
+      if (theme_link.dataset.theme === 'dark') {
+        theme_link.href = 'css/light.css';
+        theme_link.dataset.theme = 'light'
+      } else {
+        theme_link.href = 'css/dark.css';
+        theme_link.dataset.theme = 'dark'
+      }
+    }
+  </script>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123828896-1"></script>
@@ -22,6 +37,10 @@
   </script>
 </head>
 <body>
+  <label class="switch">
+    <input type="checkbox" onclick="switchTheme();">
+    <span class="slider"></span>
+  </label>
   <div class="content">
     <aside class="side">
       <figure class="picture">
