@@ -119,8 +119,10 @@ a {
 
 .side-nav {
   background-color: var(--main-bg-color);
+  margin-top: 0.5rem;
   position: absolute;
   padding: 0.5rem 1rem 1rem 1rem;
+  right: 4rem;
   z-index: 99;
 }
 
@@ -131,6 +133,7 @@ a {
   font-size: 1.25rem;
   padding: 0.5rem 0 0.5rem 0;
   position: relative;
+  width: auto;
   min-width: 3rem;
   user-select: none;
   z-index: 10;

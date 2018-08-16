@@ -3,10 +3,8 @@
   --red: #F44235;
   --orange: #FB8C00;
   --blue: #2196f3;
-  --pink: #E81D62;
 
-
-  --main-bg-color: var(#FFF);
+  --main-bg-color: #FFF;
   --main-font-color: var(--black);
   --button-color: var(--blue);
 }
