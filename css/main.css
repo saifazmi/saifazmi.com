@@ -118,8 +118,10 @@ a {
 }
 
 .side-nav {
+  background-color: var(--main-bg-color);
   position: absolute;
   padding: 0.5rem 1rem 1rem 1rem;
+  z-index: 99;
 }
 
 .side-nav a {
@@ -237,13 +239,16 @@ a {
   vertical-align: top;
 }
 
+.contact .button {
+  margin-right: 0.5rem;
+}
+
 .button {
   background-color: transparent;
   color: var(--button-color);
   display: inline-block;
   font-size: 0.875rem;
   line-height: 1;
-  margin-right: 0.5rem;
   padding: 1.25em 2em;
   user-select: none;
   vertical-align: top;

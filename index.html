@@ -10,34 +10,10 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
     crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="css/minireset.min.css">
-  <link rel="stylesheet" type="text/css" href="css/dark.css" id="theme" data-theme="dark">
+  <link rel="stylesheet" type="text/css" href="css/dark.css" id="theme">
   <link rel="stylesheet" type="text/css" href="css/main.css">
   <link rel="stylesheet" type="text/css" href="css/animations.css">
-
-  <script>
-    function switchTheme() {
-      var theme_link = document.getElementById('theme');
-
-      if (theme_link.dataset.theme === 'dark') {
-        theme_link.href = 'css/light.css';
-        theme_link.dataset.theme = 'light'
-      } else {
-        theme_link.href = 'css/dark.css';
-        theme_link.dataset.theme = 'dark'
-      }
-    }
-
-    function switchMenuIcon() {
-      var menuIcon = document.getElementsByClassName('show-menu')[0].firstChild;
-      var menuState = document.getElementById('show-menu').checked;
-
-      if (menuState === true) {
-        menuIcon.className = 'fas fa-times';
-      } else {
-        menuIcon.className = 'fas fa-bars';
-      }
-    }
-  </script>
+  <script type="text/javascript" src="js/main.js"></script>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123828896-1"></script>
@@ -58,13 +34,13 @@
     </label>
     <nav class="top-nav">
       <a href="index.html">home</a>
-      <a href="#">blog</a>
+      <a href="#resume" target="_blank">resume</a>
     </nav>
     <label for="show-menu" class="show-menu"><i class="fas fa-bars"></i>
       <input type="checkbox" id="show-menu" role="button" onclick="switchMenuIcon();">
       <aside class="side-nav">
         <a href="index.html">home</a>
-        <a href="#blog">blog</a>
+        <a href="#resume">resume</a>
       </aside>
     </label>
   </div>
@@ -106,5 +82,5 @@
     </main>
   </div>
 </body>
-
+<!-- @TODO: store stylesheet on users system to remember theme preference -->
 </html>
