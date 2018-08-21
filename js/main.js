@@ -3,13 +3,13 @@ window.onload = loadTheme;
 // Initial theme loader
 function loadTheme() {
     var styleSheet = localStorage.getItem('theme');
-    if (styleSheet !== undefined) {
+    if (styleSheet !== null) {
         setTheme(styleSheet);
         if (styleSheet === 'css/light.css') {
             document.getElementById('switch').checked = true;
         }
     } else {
-        storeStyleSheet('theme', document.getElementById('theme').href);
+        storeStyleSheet('theme', 'css/dark.css');
     }
 }
 
