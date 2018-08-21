@@ -5,17 +5,17 @@ function loadTheme() {
     var styleSheet = localStorage.getItem('theme');
     if (styleSheet !== undefined) {
         setTheme(styleSheet);
-        if (styleSheet.indexOf('css/light.css') >= 0) {
-            document.getElementById('switch').setAttribute('checked', true);
+        if (styleSheet === 'css/light.css') {
+            document.getElementById('switch').checked = true;
         }
     } else {
-        storeStyleSheet('theme', document.getElementById('theme').getAttribute('href'));
+        storeStyleSheet('theme', document.getElementById('theme').href);
     }
 }
 
 // Theme switcher
 function switchTheme() {
-    var current_theme = document.getElementById('theme').getAttribute('href');
+    var current_theme = document.getElementById('theme').href;
     if (current_theme.indexOf('dark.css') >= 0) {
         setTheme('css/light.css');
         storeStyleSheet('theme', 'css/light.css');
@@ -27,7 +27,7 @@ function switchTheme() {
 
 // Updates the current theme
 function setTheme(styleSheet) {
-    document.getElementById('theme').setAttribute('href', styleSheet);
+    document.getElementById('theme').href = styleSheet;
 }
 
 // Stores the given stylesheet name in local storage

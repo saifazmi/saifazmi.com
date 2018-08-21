@@ -87,10 +87,8 @@ a {
 }
 
 .top-nav a {
-  float: left;
   font-size: 1.25rem;
   padding: 1rem 1rem;
-  text-align: center;
   user-select: none;
 }
 
