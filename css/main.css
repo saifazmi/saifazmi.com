@@ -35,7 +35,7 @@ a {
 }
 
 .slider,
-.slider:before,
+.slider::before,
 .show-menu i,
 .side-nav,
 .button {
@@ -87,9 +87,27 @@ a {
 }
 
 .top-nav a {
+  float: left;
+  display: block;
+  border-top-color: transparent;
+  border-top-style: solid;
+  border-top-width: 1px;
   font-size: 1.25rem;
   padding: 1rem 1rem;
   user-select: none;
+}
+
+.top-nav a:hover {
+  border-top-color: var(--red);
+  border-top-style: solid;
+  border-top-width: 1px;
+}
+
+.top-nav a:active {
+  border-top-color: var(--red);
+  border-top-style: solid;
+  border-top-width: 1px;
+  transform: translateY(4px);
 }
 
 /* Side menu */
@@ -158,7 +176,7 @@ a {
   transition: 400ms;
 }
 
-.slider:before {
+.slider::before {
   position: absolute;
   content: "";
   height: 1.625rem;
@@ -175,7 +193,7 @@ a {
   background-color: #FFF;
 }
 
-#switch:checked + .slider:before {
+#switch:checked + .slider::before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
