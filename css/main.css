@@ -331,7 +331,7 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 5rem 3rem;
+    padding: 2.5rem 3rem 5rem 3rem;
   }
 
   .side {
@@ -346,7 +346,7 @@ a {
     align-items: center;
     justify-content: space-around;
     justify-content: space-evenly;
-    padding: 4rem;
+    padding: 0 4rem 4rem 4rem;
   }
 
   .side {
