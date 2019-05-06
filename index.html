@@ -1,59 +1,58 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-GB">
+
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SaifAzmi_</title>
-  <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+    crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="css/minireset.min.css">
-  <link rel="stylesheet" type="text/css" href="css/dark.css" id="theme" data-theme="dark">
+  <link rel="stylesheet" type="text/css" href="css/dark.css" id="theme">
   <link rel="stylesheet" type="text/css" href="css/main.css">
   <link rel="stylesheet" type="text/css" href="css/animations.css">
-
-  <script>
-    function switchTheme() {
-      var theme_link = document.getElementById('theme');
-
-      if (theme_link.dataset.theme === 'dark') {
-        theme_link.href = 'css/light.css';
-        theme_link.dataset.theme = 'light'
-      } else {
-        theme_link.href = 'css/dark.css';
-        theme_link.dataset.theme = 'dark'
-      }
-    }
-  </script>
+  <script type="text/javascript" src="js/main.js"></script>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123828896-1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
 
     gtag('config', 'UA-123828896-1');
   </script>
 </head>
+
 <body>
-  <label class="switch">
-    <input type="checkbox" onclick="switchTheme();">
-    <span class="slider"></span>
-  </label>
+  <div class="menu-bar">
+    <label for="switch" class="switch">
+      <input id="switch" type="checkbox" onclick="switchTheme();">
+      <span class="slider"></span>
+    </label>
+    <nav class="top-nav">
+      <a href="/">home</a>
+      <a href="assets/docs/resume-saif_azmi.pdf" target="_blank" rel="noopener noreferrer">resume</a>
+    </nav>
+    <label for="show-menu" class="show-menu"><i class="fas fa-bars"></i>
+      <input type="checkbox" id="show-menu" role="button" onclick="switchMenuIcon();">
+      <div class="side-nav">
+        <a href="/">home</a>
+        <a href="assets/docs/resume-saif_azmi.pdf" target="_blank" rel="noopener noreferrer">resume</a>
+      </div>
+    </label>
+  </div>
   <div class="content">
     <aside class="side">
       <figure class="picture">
-        <img id="pictureImage" class="picture-image"
-             src="assets/images/pixle_cube.png"
-             alt="Website Logo"
-             width="320"
-             height="320">
+        <img id="pictureImage" class="picture-image" src="assets/images/pixle_cube.png" alt="Website Logo" width="320" height="320">
       </figure>
     </aside>
     <main class="about">
       <h1 class="name">Hi, I'm Saif Azmi</h1>
-      <p class="job">Software Engineer</p>
+      <p class="job">Software Developer</p>
       <hr class="hr">
       <div class="description">
         <p>
@@ -68,19 +67,20 @@
       </div>
       <ul class="social">
         <li><a href="https://twitter.com/saifazmi_">
-          <i class="fab fa-twitter"></i>
-        </a></li>
+            <i class="fab fa-twitter"></i>
+          </a></li>
         <li><a href="https://github.com/saifazmi">
-          <i class="fab fa-github"></i>
-        </a></li>
+            <i class="fab fa-github"></i>
+          </a></li>
         <li><a href="https://www.linkedin.com/in/saifazmi/">
-          <i class="fab fa-linkedin"></i>
-        </a></li>
+            <i class="fab fa-linkedin"></i>
+          </a></li>
         <li><a href="https://keybase.io/saifazmi">
-          <i class="fab fa-keybase"></i>
-        </a></li>
+            <i class="fab fa-keybase"></i>
+          </a></li>
       </ul>
     </main>
   </div>
 </body>
+
 </html>

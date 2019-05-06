@@ -24,12 +24,30 @@ a {
 
 /* Shared */
 
-.wallpaper {
-  display: block;
-  height: 100%;
-  left: 0;
-  top: 0;
-  width: 50%;
+.show-menu,
+.side-nav {
+  display: none;
+}
+
+.switch input,
+.show-menu input {
+  display: none;
+}
+
+.slider,
+.slider::before,
+.show-menu i,
+.side-nav,
+.button {
+  border-radius: 0;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.switch,
+.show-menu i {
+  height: 2.25rem;
+  position: relative;
 }
 
 .picture-image {
@@ -53,25 +71,100 @@ a {
   transition-duration: 100ms;
 }
 
+/* Menu bar */
+
+.menu-bar {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  min-height: 10vh;
+  padding: 1rem 3rem 0 3rem;
+  position: relative;
+}
+
+.top-nav {
+  overflow: hidden;
+}
+
+.top-nav a {
+  float: left;
+  display: block;
+  border-top-color: transparent;
+  border-top-style: solid;
+  border-top-width: 1px;
+  font-size: 1.25rem;
+  padding: 1rem 1rem;
+  user-select: none;
+}
+
+.top-nav a:hover {
+  border-top-color: var(--red);
+  border-top-style: solid;
+  border-top-width: 1px;
+}
+
+.top-nav a:active {
+  border-top-color: var(--red);
+  border-top-style: solid;
+  border-top-width: 1px;
+  transform: translateY(4px);
+}
+
+/* Side menu */
+
+.show-menu {
+  cursor: pointer;
+}
+
+.show-menu i {
+  font-size: 1.75rem;
+  width: 2.25rem;
+}
+
+.fa-bars {
+  padding: 0.2rem 0 0 0.3rem;
+}
+
+.fa-times {
+  padding: 0.2rem 0 0 0.48rem;
+}
+
+#show-menu:checked + .side-nav {
+  display: block;
+}
+
+.side-nav {
+  background-color: var(--main-bg-color);
+  margin-top: 0.5rem;
+  position: absolute;
+  padding: 0.5rem 1rem 1rem 1rem;
+  right: 3rem;
+  z-index: 99;
+}
+
+.side-nav a {
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  display: block;
+  font-size: 1.25rem;
+  padding: 0.5rem 0 0.5rem 0;
+  position: relative;
+  width: auto;
+  min-width: 3rem;
+  user-select: none;
+  z-index: 10;
+}
+
 /* Theme switch */
 
 .switch {
   display: inline-block;
-  height: 2.25rem;
-  margin: 1rem 0 0 1rem;
-  position: relative;
+  margin-right: 1rem;
   width: 3.8rem;
-}
-
-.switch input {
-  display: none;
 }
 
 .slider {
   background-color: var(--main-bg-color);
-  border-radius: 0;
-  border-style: solid;
-  border-width: 1px;
   bottom: 0;
   cursor: pointer;
   left: 0;
@@ -83,27 +176,24 @@ a {
   transition: 400ms;
 }
 
-.slider:before {
+.slider::before {
   position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
+  height: 1.625rem;
+  width: 1.625rem;
+  left: 0.25rem;
+  bottom: 0.25rem;
   background-color: var(--main-font-color);
   -webkit-transition: 400ms;
   -moz-transition: 400ms;
   transition: 400ms;
-  border-radius: 0;
-  border-style: solid;
-  border-width: 1px;
 }
 
-input:checked + .slider {
+#switch:checked + .slider {
   background-color: #FFF;
 }
 
-input:checked + .slider:before {
+#switch:checked + .slider::before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
@@ -113,8 +203,8 @@ input:checked + .slider:before {
 
 .content {
   display: flex;
+  min-height: 90vh;
   position: relative;
-  min-height: 100vh;
 }
 
 .side {
@@ -168,16 +258,16 @@ input:checked + .slider:before {
   vertical-align: top;
 }
 
+.contact .button {
+  margin-right: 0.5rem;
+}
+
 .button {
   background-color: transparent;
-  border-radius: 0;
-  border-style: solid;
-  border-width: 1px;
-  color: var(--green);
+  color: var(--button-color);
   display: inline-block;
   font-size: 0.875rem;
   line-height: 1;
-  margin-right: 0.5rem;
   padding: 1.25em 2em;
   user-select: none;
   vertical-align: top;
@@ -229,12 +319,21 @@ input:checked + .slider:before {
 /* Responsiveness */
 
 @media screen and (max-width: 799px) {
+  .top-nav {
+    display: none;
+  }
+
+  .show-menu {
+    display: inline-block;
+  }
+
   .content {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 5rem 3rem;
+    padding: 2.5rem 3rem 5rem 3rem;
   }
+
   .side {
     margin-bottom: 3rem;
     width: 100%;
@@ -242,12 +341,14 @@ input:checked + .slider:before {
 }
 
 @media screen and (min-width: 800px) {
+
   .content {
     align-items: center;
     justify-content: space-around;
     justify-content: space-evenly;
-    padding: 4rem;
+    padding: 0 4rem 4rem 4rem;
   }
+
   .side {
     flex-grow: 0;
     flex-shrink: 0;
@@ -255,6 +356,7 @@ input:checked + .slider:before {
     margin-right: 4rem;
     width: 20rem;
   }
+
   .about {
     flex-grow: 1;
     flex-shrink: 1;
