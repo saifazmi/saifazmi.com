@@ -252,6 +252,12 @@ a {
   font-size: 1.5rem;
 }
 
+.link {
+  border-bottom-color: var(--orange);
+  border-bottom-style: dashed;
+  border-bottom-width: 1px;
+}
+
 .contact {
   display: inline-block;
   margin-top: 1.5rem;
